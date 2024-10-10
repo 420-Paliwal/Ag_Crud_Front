@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-8">
+      <div class="card">
+          <div class="card-header bg-success">
+              Client List
+          </div>
+          <div class="card-body">
+              <div class="row mt-4">
+                  <div class="col-12">
+                      <table class="table table-bordered">
+                          <thead >
+                              <tr>
+                                  <th class="table-color">Sr No</th>
+                                  <th class="table-color">Company Name</th>
+                                  <th class="table-color">Persom Name</th>
+                                  <th class="table-color">Contact No</th>
+                                  <th class="table-color">City</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              @for (item of getdata; track $index) {
+                                  <tr class="text-center">
+                                      <td>{{$index +1}}</td>
+                                      <td>{{item.firstName}}</td>
+                                      <td>{{item.lastName}}</td>
+                                      <td>{{item.emailId}}</td>
+                                      <td>
+                                          <button type="button" class="btn btn-primary m-1" >Edit</button>
+                                          <button type="button" class="btn btn-danger m-1" >Delete</button>
+                                      </td>
+                                  </tr>
+                              }
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
